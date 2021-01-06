@@ -3,7 +3,9 @@ package com.example.login;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -23,6 +25,9 @@ public class Store extends AppCompatActivity {
         products = new ArrayList<>();
         products.add(new Product("Livadski med", "800", "Novkovic", "pic1"));
         products.add(new Product("Bagremov med", "1000", "Novkovic", "pic2"));
+        products.add(new Product("Šumski med", "1000", "Novkovic", "pic3"));
+        products.add(new Product("Suncokret med", "1000", "Novkovic", "pic4"));
+        products.add(new Product("Coko med", "1200", "Mijailovic", "pic9"));
         setTitle("Prodavnica");
 
         ProductsAdapter adapter = new ProductsAdapter(this, products);
