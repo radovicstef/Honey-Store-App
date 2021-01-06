@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 public class Korpa extends AppCompatActivity {
 
@@ -16,6 +17,10 @@ public class Korpa extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_korpa);
         setTitle("Korpa");
+
+        NarudzbineAdapter adapter = new NarudzbineAdapter(this, Store.narudzbine);
+        ListView listView = (ListView) findViewById(R.id.listKorpa);
+        listView.setAdapter(adapter);
     }
 
     @Override

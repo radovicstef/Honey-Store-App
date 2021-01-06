@@ -101,7 +101,8 @@ u slučaju pada imuniteta i prehlade."
                 <Button android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="DODAJ U KORPU"></Button>
+                    android:text="DODAJ U KORPU"
+                    android:onClick="addToChart"></Button>
             </TableRow>
         </TableLayout>
     </LinearLayout>
