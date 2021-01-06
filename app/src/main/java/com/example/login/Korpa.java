@@ -8,7 +8,14 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class Korpa extends AppCompatActivity {
 
@@ -21,6 +28,23 @@ public class Korpa extends AppCompatActivity {
         NarudzbineAdapter adapter = new NarudzbineAdapter(this, Store.narudzbine);
         ListView listView = (ListView) findViewById(R.id.listKorpa);
         listView.setAdapter(adapter);
+
+        int overallPrice = 0;
+
+        for(int i=0; i<Store.narudzbine.size(); i++){
+            overallPrice += Store.narudzbine.get(i).overallPrice;
+        }
+
+        TextView overallPriceView = (TextView) findViewById(R.id.overallPrice);
+        overallPriceView.setText(String.valueOf(overallPrice));
+    }
+
+    public void poruci(View view){
+        Store.narudzbine = new ArrayList<>();
+        Toast.makeText(this, "Uspešno ste poručili proizvode!", Toast.LENGTH_SHORT).show();
+
+        Intent intent = new Intent(this, Store.class);
+        this.startActivity(intent);
     }
 
     @Override
