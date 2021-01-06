@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo1"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"></ImageView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="Uloguj se"
+        android:textColor="#A84324"
+        android:textSize="60px"></TextView>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+        <TableRow android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:id="@+id/username"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:id="@+id/password"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center"
+            android:layout_marginTop="25dp">
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#7BED8D"
+                android:text="Uloguj se"
+                android:onClick="login"></Button>
+        </TableRow>
+        <TableRow android:gravity="center"
+            android:layout_marginTop="100dp">
+            <Button
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/white"
+                android:textColor="#A6BCD0"
+                android:text="Registruj se"
+                android:onClick="register"></Button>
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

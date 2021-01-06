@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp">
+        <TableRow android:gravity="center" android:layout_marginTop="150dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Ime"
+                android:id="@+id/nameRegister"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Prezime"
+                android:id="@+id/surnameRegister"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Username"
+                android:id="@+id/usernameRegister"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:id="@+id/passwordRegister"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Adresa"
+                android:id="@+id/addressRegister"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Telefon"
+                android:id="@+id/phoneRegister"></EditText>
+        </TableRow>
+        <TableRow android:gravity="center">
+            <Button android:width="240dp"
+                android:text="Registruj se"
+                android:onClick="submitRegister"></Button>
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
