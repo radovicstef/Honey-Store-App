@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Register extends AppCompatActivity {
 
@@ -30,6 +31,13 @@ public class Register extends AppCompatActivity {
         String phoneString = phone.getText().toString();
         String usernameString = username.getText().toString();
         String passwordString = password.getText().toString();
+
+        for(int i=0; i<MainActivity.users.size(); i++){
+            if(MainActivity.users.get(i).username.equals(usernameString)){
+                Toast.makeText(this, "Username je već zauzet!", Toast.LENGTH_SHORT).show();
+                return;
+            }
+        }
 
         MainActivity.users.add(new User(nameString, surnameString, usernameString, addressString, phoneString, passwordString));
 
