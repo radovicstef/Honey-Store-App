@@ -17,13 +17,12 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     public static ArrayList<User> users = new ArrayList<>();
-    public static User loginUser;
+    public static User loginUser = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        users.add(new User("Stefan", "Radovic", "stefan", "Rudo 3", "123456", "123"));
         setTitle("Medenjaci");
     }
 
