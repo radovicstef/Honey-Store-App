@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Prodavnica"
+        android:id="@+id/prodavnica"></item>
+    <item android:title="Korpa"
+        android:id="@+id/korpa"></item>
+    <item android:title="Profil"
+        android:id="@+id/profil"></item>
+</menu>
