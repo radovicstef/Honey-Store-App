@@ -9,11 +9,13 @@ public class Product {
     public String description;
     public String usage;
 
-    public Product(String productName, String price, String buyer, String imagePath){
+    public Product(String productName, String price, String buyer, String imagePath, String description, String usage){
         this.productName = productName;
         this.price = price;
         this.seller = buyer;
         this.imagePath = imagePath;
+        this.description = description;
+        this.usage = usage;
     }
 
     public String getProductName() {
