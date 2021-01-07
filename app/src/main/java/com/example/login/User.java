@@ -1,5 +1,7 @@
 package com.example.login;
 
+import java.util.ArrayList;
+
 public class User {
 
     public String name;
@@ -8,6 +10,7 @@ public class User {
     public String address;
     public String phone;
     public String password;
+    public ArrayList<Narudzbina> narudzbine;
 
     public User(String name, String surname, String username, String address, String phone, String password) {
         this.name = name;
@@ -16,6 +19,15 @@ public class User {
         this.address = address;
         this.phone = phone;
         this.password = password;
+        this.narudzbine = new ArrayList<>();
+    }
+
+    public ArrayList<Narudzbina> getNarudzbine() {
+        return narudzbine;
+    }
+
+    public void setNarudzbine(ArrayList<Narudzbina> narudzbine) {
+        this.narudzbine = narudzbine;
     }
 
     public String getName() {

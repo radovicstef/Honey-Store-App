@@ -60,6 +60,7 @@ public class Profil extends AppCompatActivity {
                 MainActivity.users.get(i).setPassword(MainActivity.loginUser.getPassword());
                 MainActivity.users.get(i).setAddress(MainActivity.loginUser.getAddress());
                 MainActivity.users.get(i).setPhone(MainActivity.loginUser.getPhone());
+                MainActivity.users.get(i).setNarudzbine(MainActivity.loginUser.narudzbine);
                 break;
             }
         }

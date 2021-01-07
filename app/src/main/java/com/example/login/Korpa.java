@@ -25,14 +25,14 @@ public class Korpa extends AppCompatActivity {
         setContentView(R.layout.activity_korpa);
         setTitle("Korpa");
 
-        NarudzbineAdapter adapter = new NarudzbineAdapter(this, Store.narudzbine);
+        NarudzbineAdapter adapter = new NarudzbineAdapter(this, MainActivity.loginUser.narudzbine);
         ListView listView = (ListView) findViewById(R.id.listKorpa);
         listView.setAdapter(adapter);
 
         int overallPrice = 0;
 
-        for(int i=0; i<Store.narudzbine.size(); i++){
-            overallPrice += Store.narudzbine.get(i).overallPrice;
+        for(int i=0; i<MainActivity.loginUser.narudzbine.size(); i++){
+            overallPrice += MainActivity.loginUser.narudzbine.get(i).overallPrice;
         }
 
         TextView overallPriceView = (TextView) findViewById(R.id.overallPrice);
@@ -40,7 +40,7 @@ public class Korpa extends AppCompatActivity {
     }
 
     public void poruci(View view){
-        Store.narudzbine = new ArrayList<>();
+        MainActivity.loginUser.narudzbine = new ArrayList<>();
         Toast.makeText(this, "Uspešno ste poručili proizvode!", Toast.LENGTH_SHORT).show();
 
         Intent intent = new Intent(this, Store.class);

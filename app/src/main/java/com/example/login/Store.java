@@ -21,8 +21,6 @@ public class Store extends AppCompatActivity {
 
     public static ArrayList<Product> products;
 
-    public static ArrayList<Narudzbina> narudzbine = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

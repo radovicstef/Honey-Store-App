@@ -61,7 +61,7 @@ public class Detalji extends AppCompatActivity {
         if(!kolicina.getText().toString().matches("")){
             int kolicinaBroj = Integer.parseInt(kolicina.getText().toString());
             Toast.makeText(this, "+"+kolicinaBroj, Toast.LENGTH_SHORT).show();
-            Store.narudzbine.add(new Narudzbina(Store.products.get(index), kolicinaBroj, Integer.parseInt(Store.products.get(index).price)*kolicinaBroj));
+            MainActivity.loginUser.narudzbine.add(new Narudzbina(Store.products.get(index), kolicinaBroj, Integer.parseInt(Store.products.get(index).price)*kolicinaBroj));
         }
         else{
             Toast.makeText(this, "Niste uneli željenu količinu!", Toast.LENGTH_SHORT).show();
